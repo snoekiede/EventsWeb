@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: iedesnoek/webeventsnet:v3
+          image: <your dockerhub username>/webeventsnet:v1
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:
