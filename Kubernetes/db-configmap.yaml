@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-secrets-net
+  labels:
+    app: postgresdb
+data:
+  POSTGRES_DB: "webeventsnet"
+  POSTGRES_USER: "testUser"
+  POSTGRES_PASSWORD: "secrets1234"
+  HOST: "postgresdb.default"
+  PORT: "5432"
