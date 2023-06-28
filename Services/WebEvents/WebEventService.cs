@@ -21,7 +21,7 @@ namespace EventsWeb.Services.WebEvents
             return newEvent;
         }
 
-        public async Task<WebEvent> Delete(int id)
+        public async Task<WebEvent?> Delete(int id)
         {
             var entity = this.context.Events.SingleOrDefault(x => x.Id == id);
             if (entity!=null)
@@ -38,7 +38,7 @@ namespace EventsWeb.Services.WebEvents
             return await this.context.Events.ToListAsync();
         }
 
-        public async Task<WebEvent> Fetch(int id)
+        public async Task<WebEvent?> Fetch(int id)
         {
             return await this.context.Events.SingleOrDefaultAsync(x => x.Id == id);
         }

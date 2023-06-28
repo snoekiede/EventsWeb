@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
+﻿
 namespace EventsWeb.Models
 {
     public class WebEvent

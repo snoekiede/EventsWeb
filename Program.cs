@@ -37,9 +37,9 @@ namespace EventsWeb
                 {
                     await dataContext.Database.MigrateAsync();
                 }
-            } catch(Exception ex)
+            } catch
             {
-                throw ex;
+                throw;
             }
             
             // Configure the HTTP request pipeline.
