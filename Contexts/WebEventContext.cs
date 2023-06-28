@@ -14,7 +14,12 @@ namespace EventsWeb.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql(Configuration.GetConnectionString("defaultDb"));
+            var connectionString = Environment.GetEnvironmentVariable("connectionstring");
+            if (String.IsNullOrEmpty(connectionString))
+            {
+                connectionString = Configuration.GetConnectionString("defaultDb");
+            }
+            optionsBuilder.UseNpgsql(connectionString);
             base.OnConfiguring(optionsBuilder);
         }
 
